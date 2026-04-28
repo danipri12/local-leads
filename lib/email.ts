@@ -1,7 +1,7 @@
-import nodemailer from 'nodemailer'
+import { createTransport } from 'nodemailer'
 import type { Lead } from './airtable'
 
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER,
