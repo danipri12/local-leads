@@ -28,7 +28,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, matched: providers.length })
   } catch (err: any) {
-    console.error('[submit]', err)
-    return NextResponse.json({ error: 'Something went wrong. Please try again.' }, { status: 500 })
+    console.error('[submit] ERROR:', err?.message ?? err)
+    return NextResponse.json(
+      { error: 'Something went wrong. Please try again.', detail: err?.message ?? String(err) },
+      { status: 500 }
+    )
   }
 }
