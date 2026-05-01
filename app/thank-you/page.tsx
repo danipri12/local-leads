@@ -15,7 +15,7 @@ export default function ThankYouPage() {
         </p>
         <p className="text-sm text-gray-400 mb-6">
           Didn't get an email? Check your spam folder or{' '}
-          <a href="mailto:hello@localleads.com" className="text-blue-600 hover:underline">
+          <a href="mailto:linkleaderteam@gmail.com" className="text-blue-600 hover:underline">
             contact us
           </a>
           .

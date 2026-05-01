@@ -15,7 +15,7 @@ export async function sendProviderLead(
   lead: Lead
 ): Promise<void> {
   await transporter.sendMail({
-    from: `LocalLeads <${process.env.GMAIL_USER}>`,
+    from: `LinkLeader <${process.env.GMAIL_USER}>`,
     to: providerEmail,
     subject: `New Lead: ${lead.service} in ${lead.zipCode}`,
     html: `
@@ -58,7 +58,7 @@ export async function sendCustomerConfirmation(
       : `We're actively looking for providers in your area. We'll reach out as soon as we find a match.`
 
   await transporter.sendMail({
-    from: `LocalLeads <${process.env.GMAIL_USER}>`,
+    from: `LinkLeader <${process.env.GMAIL_USER}>`,
     to: customerEmail,
     subject: `Your ${service} request has been received`,
     html: `
@@ -67,7 +67,7 @@ export async function sendCustomerConfirmation(
         <p>Hi ${customerName},</p>
         <p>${matched}</p>
         <p>If you don't receive a response within 24 hours, reply to this email and we'll follow up directly.</p>
-        <p style="color:#6b7280;font-size:13px;">— The LocalLeads Team</p>
+        <p style="color:#6b7280;font-size:13px;">— The LinkLeader Team</p>
       </div>
     `,
   })

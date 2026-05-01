@@ -85,7 +85,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="py-6 px-4 bg-gray-800 text-gray-400 text-sm text-center">
-        <p>© {new Date().getFullYear()} LocalLeads</p>
+        <p>© {new Date().getFullYear()} LinkLeader</p>
       </footer>
     </main>
   )
